@@ -11,7 +11,7 @@ public class Customer {
     private String Address;
     private String Email;
     private String phone;
-    private LocalDate Birthday;
+    private LocalDate birthday;
     public String getName() {
         return Name;
     }
@@ -39,7 +39,7 @@ public class Customer {
     @JsonSerialize(using = LocalDateSerializer.class)
     @JsonDeserialize(using = LocalDateDeserializer.class)
     public LocalDate getBirthday(){
-        return Birthday;
+        return birthday;
     }
     public void setBirthday(LocalDate birthday){
         this.birthday = birthday;
