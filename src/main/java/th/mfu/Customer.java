@@ -1,5 +1,7 @@
 package th.mfu;
 
+import java.time.LocalDate;
+
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
@@ -9,7 +11,7 @@ public class Customer {
     private String Address;
     private String Email;
     private String phone;
-    private String Birthday;
+    private LocalDate Birthday;
     public String getName() {
         return Name;
     }
@@ -36,11 +38,11 @@ public class Customer {
     }
     @JsonSerialize(using = LocalDateSerializer.class)
     @JsonDeserialize(using = LocalDateDeserializer.class)
-    public String getBirthday(){
+    public LocalDate getBirthday(){
         return Birthday;
     }
-    public void setBirthday(String birthday){
-        Birthday = birthday;
+    public void setBirthday(LocalDate birthday){
+        this.birthday = birthday;
     }
     
 
