@@ -1,5 +1,4 @@
 package th.mfu;
-
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.BadCredentialsException;
@@ -42,3 +41,4 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
             and().addFilter(filter).authorizeRequests().anyRequest().authenticated();
     }
 }
+
